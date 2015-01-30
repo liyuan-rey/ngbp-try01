@@ -3,17 +3,21 @@
  */
 
 require.config({
-    baseUrl: '../..',
+    //baseUrl: '..',
     paths: {
-        jquery: 'vendor/jquery/dist/jquery'
+        jquery: '../../vendor/jquery/dist/jquery',
+        product: './product/product'
     }
 });
 
 function run() {
-    var $ = require('jquery');
-    $('content').innerText = "test jquery";
-    //var product = require('product');
-    //product.setContent();
+    require(['jquery', 'product'], function($, product) {
+
+        var info = $('div#info');
+        info.text("jquery test");
+        product.setContent();
+    });
+
 }
 
 run();

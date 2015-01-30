@@ -1,0 +1,16 @@
+/**
+ * Created by liyuan on 2015/1/29.
+ */
+define(["require", "jquery"], function(require, $) {
+
+    var handler = {
+        info: "",
+        setContent: function () {
+            $('div#info').text(this.info);
+        }
+    };
+
+    handler.info = "product test";
+
+    return handler;
+});

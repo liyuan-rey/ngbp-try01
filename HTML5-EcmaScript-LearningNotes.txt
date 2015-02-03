@@ -41,5 +41,7 @@ paths: {
 
 * jquery选择器：$('#<id>')指定id，$('.<name>')指定class name
 
+* ecmascript代码中的字符串常量优先使用单引号而不是双引号
+
 * 
 

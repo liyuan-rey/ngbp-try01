@@ -1,0 +1,29 @@
+HTML5-JavaScript(ECMA)学习
+
+* 新建工程, 增加RequireJS, jQuery, AngularJS.Core的引用。
+注意如果用不到的话，并不必引用AngularJS的所有模块
+
+* RequireJS, CommonJS和AMD的差异
+这个网上有很多讨论：
+总体上AMD更适合于浏览器应用;
+CommonJS范围很广, 从模块管理这个方面说，比AMD更倾向于用在(NodeJS支持下的)本地JS应用；
+RequireJS主要基于CommonJS的原则，为浏览器应用提供了加载JS模块的能力，RequireJS也可以在CommonJS环境下使用，CommonJS中另一个广泛使用的是curl
+
+* html5文件声明：<!DOCTYPE html>
+
+* html5页面文件<html>不倾向于使用xmlns属性
+
+* html5中指明页面字符集编码，倾向于用
+<meta charset="utf-8">
+而不是
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+* html5实际上并非xml，html5不要求标记必须结束，比如<meta charset="utf-8">不必写为"/>"，也不必要结束标签</meta>
+
+* <script></script>标记不能够写成<script/>, 某些浏览器不支持空标记
+
+* <script type="text/javascript"...查阅这篇文章：http://www.cnblogs.com/flyandon/archive/2010/11/02/1867475.html
+虽然标准约定text/javascript、text/ecmascript已经被弃用，并且实际上script文件是以application/x-javascript类型来处理的（但
+许多web浏览器会因此忽略该文件），但为了保持最广泛的兼容性，通常我们还是写成text/javascript
+
+* angularJS工程推荐结构

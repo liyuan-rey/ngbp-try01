@@ -615,7 +615,7 @@ module.exports = function ( grunt ) {
       return file.replace( dirRE, '' );
     });
 
-    grunt.file.copy('src/index.html', this.data.dir + '/index.html', { 
+    grunt.file.copy('src/index.html', this.data.dir + '/index.html', {
       process: function ( contents, path ) {
         return grunt.template.process( contents, {
           data: {
@@ -626,6 +626,8 @@ module.exports = function ( grunt ) {
         });
       }
     });
+
+    grunt.file.copy('src/myindex.html', this.data.dir + '/myindex.html');
   });
 
   /**

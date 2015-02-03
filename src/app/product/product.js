@@ -4,13 +4,13 @@
 define(["require", "jquery"], function(require, $) {
 
     var handler = {
-        info: "",
-        setContent: function () {
+        info: '',
+        setInfo: function () {
             $('div#info').text(this.info);
         }
     };
 
-    handler.info = "product test";
+    handler.info = 'product test';
 
     return handler;
 });

@@ -15,7 +15,7 @@ function run() {
 
         var info = $('div#info');
         info.text("jquery test");
-        product.setContent();
+        product.setInfo();
     });
 
 }

@@ -9,7 +9,7 @@ HTML5-JavaScript(ECMA)学习
 CommonJS范围很广, 从模块管理这个方面说，比AMD更倾向于用在(NodeJS支持下的)本地JS应用；
 RequireJS主要基于CommonJS的原则，为浏览器应用提供了加载JS模块的能力，RequireJS也可以在CommonJS环境下使用，CommonJS中另一个广泛使用的是curl
 
-* html5文件声明：<!DOCTYPE html>
+* html5文件声明: <!DOCTYPE html>
 
 * html5页面文件<html>不倾向于使用xmlns属性
 
@@ -26,4 +26,20 @@ RequireJS主要基于CommonJS的原则，为浏览器应用提供了加载JS模块的能力，RequireJS也
 虽然标准约定text/javascript、text/ecmascript已经被弃用，并且实际上script文件是以application/x-javascript类型来处理的（但
 许多web浏览器会因此忽略该文件），但为了保持最广泛的兼容性，通常我们还是写成text/javascript
 
-* angularJS工程推荐结构
+* angularJS工程推荐结构：ng-boilerplate
+
+* requirejs：在页面中引入RequireJS的典型方式如
+<script type="text/javascript" src="vendor/requirejs/require.js" data-main="src/app/myapp"></script>
+特别注意 ‘data-main’ 属性的使用, RequireJS会利用该属性异步加载和执行myapp.js("src/app/myapp")文件
+
+* requirejs: 如果未指定require.config - baseUrl配置项时，在paths配置项中指定的相对路径是相对于当前js文件所在路径的，
+如下src/app/myapp.js文件内容片段中，product模块名会对应加载src/app/product/product.js文件。
+paths: {
+        jquery: '../../vendor/jquery/dist/jquery',
+        product: './product/product'
+    }
+
+* jquery选择器：$('#<id>')指定id，$('.<name>')指定class name
+
+* 
+

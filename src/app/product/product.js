@@ -1,7 +1,7 @@
 /**
  * Created by liyuan on 2015/1/29.
  */
-define(["require", "jquery"], function(require, $) {
+define('product', ["require", "jquery"], function(require, $) {
 
     var handler = {
         info: '',

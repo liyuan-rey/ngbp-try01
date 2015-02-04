@@ -627,7 +627,8 @@ module.exports = function ( grunt ) {
       }
     });
 
-    grunt.file.copy('src/myindex.html', this.data.dir + '/myindex.html');
+    grunt.file.copy('src/jqindex.html', this.data.dir + '/jqindex.html');
+    grunt.file.copy('src/ngindex.html', this.data.dir + '/ngindex.html');
   });
 
   /**
